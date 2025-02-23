@@ -1,0 +1,122 @@
+
+
+/* Main Body Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login Box */
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-box img.logo {
+    width: 150px;
+    margin-top: 1px;
+    height: 150px;
+}
+
+.login-box h2 {
+    font-size: 30px;
+    color: violet;
+    margin-bottom: 5px;
+}
+
+.login-box h3 {
+    font-size: 15px;
+    color: violet;
+    margin-bottom: 5px;
+}
+
+.login-box p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #f3f3f3;
+    padding: 12px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+.input-group i {
+    color: violet;
+    margin-right: 10px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Options & Forgot Password */
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.options a {
+    text-decoration: none;
+    color: violet;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+/* Sign In Button */
+.btn {
+    width: 100%;
+    background: violet;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #aa00ff;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
