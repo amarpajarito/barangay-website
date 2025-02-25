@@ -11,14 +11,14 @@ session_start();
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="home-style.css">
+    <script src="/user-website/script.js"></script>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
     <nav class="navbar">
         <div class="header-content">
-            <a href="index.php" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+            <a href="home.php">
                 <div class="logo">
                     <img src="/images/barangay-logo.png" alt="Barangay San Vicente Logo">
                 </div>
@@ -28,9 +28,8 @@ session_start();
                 </div>
             </a>
         </div>
-
         <ul class="nav-links">
-            <li><a href="index.php">Home</a></li>
+            <li><a href="/user-website/home.php">Home</a></li>
             <li class="request-item">
                 <a href="request.php">Request <i class="fas fa-angle-down"></i></a>
                 <div class="submenu">
@@ -42,31 +41,35 @@ session_start();
             <li><a href="contacts.html">Contact</a></li>
         </ul>
 
-        <div class="nav-buttons">
-            <?php
-            if (isset($_SESSION['user_name'])) {
-                // User is logged in, show profile dropdown
-                echo '<div class="profile-dropdown">
-                        <button class="profile-btn">
-                            <img src="/images/default-profile.png" alt="Profile" class="profile-pic">
-                            <span>' . htmlspecialchars($_SESSION['user_name']) . '</span>
-                            <i class="fas fa-angle-down"></i>
-                        </button>
-                        <div class="submenu">
-                            <a href="logout.php">Logout</a>
-                        </div>
-                      </div>';
-            } else {
-                // User is not logged in, show Sign-in and Register buttons
-                echo '<a href="login.php" class="btn sign-in">Sign in</a>';
-                echo '<a href="register.php" class="btn register">Register</a>';
-            }
-            ?>
-        </div>
+        <?php
+        if (isset($_SESSION['first_name']) && isset($_SESSION['last_name'])) {
+            $full_name = htmlspecialchars($_SESSION['first_name'] . " " . $_SESSION['last_name']);
+        } else {
+            $full_name = htmlspecialchars($_SESSION['user_name']);
+        }
+
+        $profile_pic = isset($_SESSION['profile_pic']) ? $_SESSION['profile_pic'] : "/images/barangay-logo.png";
+
+        echo '<div class="profile-dropdown">
+            <button class="profile-btn">
+                <img src="' . htmlspecialchars($profile_pic) . '" alt="Profile" class="profile-pic">
+                <span>' . $full_name . '</span>
+                <i class="fas fa-angle-down"></i>
+            </button>
+            <div class="submenu">
+                <a href="profile.php">Edit Profile</a>
+                <a href="/backend/logout.php">Logout</a>
+            </div>
+        </div>';
+        ?>
     </nav>
 </header>
+<main>
+    <div class="home-banner-container">
+        <img src="/images/Council.png" alt="Barangay San Vicente Banner">
+    </div>
+</main>
 
-<!-- FOOTER -->
 <footer class="footer-panel">
     <div class="footer-top">
         <div class="footer-content">
@@ -90,12 +93,12 @@ session_start();
                 <div>
                     <h3>GOVERNMENT LINKS</h3>
                     <ul>
-                        <li><a href="#">Office of the President</a></li>
-                        <li><a href="#">Office of the Vice President</a></li>
-                        <li><a href="#">Senate of the Philippines</a></li>
-                        <li><a href="#">House of Representatives</a></li>
-                        <li><a href="#">Supreme Court</a></li>
-                        <li><a href="#">Court of Appeals</a></li>
+                        <li><a href="https://op-proper.gov.ph/">Office of the President</a></li>
+                        <li><a href="https://www.congress.gov.ph/">Office of the Vice President</a></li>
+                        <li><a href="https://legacy.senate.gov.ph/">Senate of the Philippines</a></li>
+                        <li><a href="https://www.congress.gov.ph/">House of Representatives</a></li>
+                        <li><a href="https://sc.judiciary.gov.ph/">Supreme Court</a></li>
+                        <li><a href="https://ca.judiciary.gov.ph/">Court of Appeals</a></li>
                         <li><a href="#">Sandiganbayan</a></li>
                     </ul>
                 </div>

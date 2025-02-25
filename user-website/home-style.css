@@ -30,10 +30,11 @@ main {
     font-size: 14px;
 }
 
-.header-content {
+.header-content a{
     display: flex;
     align-items: center;
     margin-left: 5rem;
+    text-decoration: none;
     gap: 10px; 
 }
 
@@ -45,22 +46,11 @@ main {
 
 .header-title {
     text-align: left; 
-    color: violet;
+    color: #AA60C8;
 }
 
 .header-title h2, h3 {
     margin: 0; 
-}
-
-.header-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-}
-
-.header-link .logo img {
-    height: 60px; /* Adjust size as needed */
 }
 
 .nav-links {
@@ -83,7 +73,7 @@ main {
 }
 
 .nav-links a:hover {
-    color: violet;
+    color: #AA60C8;
     border-radius: 5px;
 }
 
@@ -93,36 +83,6 @@ main {
 
 .request-item a i {
     margin-left: 0.3rem;
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 10px;
-    margin-right: 5rem;
-}
-
-.btn {
-    padding: 8px 15px;
-    border: none;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.sign-in {
-    background: white;
-    color: black;
-    border: 2px solid black;
-}
-
-.register {
-    background: violet;
-    color: white;
-}
-
-.sign-in:hover {
-    color: violet;
 }
 
 @media screen and (max-width: 768px) {
@@ -160,6 +120,7 @@ main {
     padding: 10px 0;
     min-width: 200px;
     margin-top: 2.5rem;
+    z-index: 10;
 }
 
 .submenu a {
@@ -178,10 +139,16 @@ main {
     color: violet;
 }
 
+.submenu.active {
+    display: block;
+}
+
+
 /* Profile Dropdown */
 .profile-dropdown {
     position: relative;
     display: inline-block;
+    margin-right: 5rem;
 }
 
 .profile-btn {
@@ -210,11 +177,25 @@ main {
     top: 50px;
 }
 
-/* Ensure the submenu appears properly */
 .profile-dropdown:hover .submenu {
     display: block;
 }
 
+/* Home Banner */
+.home-banner-container {
+    max-width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+}
+
+.home-banner img {
+    width: 2300px;
+    height: auto;
+    object-fit: cover;
+}
 
 /* Footer */
 .footer-panel {
@@ -225,7 +206,7 @@ main {
 }
 
 .footer-top {
-    background: violet;
+    background: #AA60C8;
     color: white;
     padding: 20px;
 }
