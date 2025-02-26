@@ -2,7 +2,7 @@
 session_start();
 $error = isset($_SESSION['error']) ? $_SESSION['error'] : null;
 $fieldError = isset($_SESSION['field']) ? $_SESSION['field'] : null;
-unset($_SESSION['error'], $_SESSION['field']); // Clear session error after displaying it
+unset($_SESSION['error'], $_SESSION['field']);
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ unset($_SESSION['error'], $_SESSION['field']); // Clear session error after disp
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Barangay San Vicente</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="login-style.css">
 </head>
 <body>
