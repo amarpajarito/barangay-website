@@ -136,7 +136,7 @@ main {
 
 .submenu a:hover {
     background-color: #f0f0f0; 
-    color: violet;
+    color: #AA60C8;
 }
 
 .submenu.active {
@@ -174,7 +174,7 @@ main {
 
 .profile-dropdown .submenu {
     right: 0;
-    top: 50px;
+    top: 37px;
 }
 
 .profile-dropdown:hover .submenu {
@@ -199,7 +199,7 @@ main {
 
 /* Footer */
 .footer-panel {
-    background-color: violet;
+    background-color: #AA60C8;
     overflow: hidden;
     margin: 0px;
     margin-top: auto;
