@@ -273,44 +273,121 @@ margin-top: auto;
     }
 }
 
-/* Enlist Design */
-section.enlist {
+/* Enlistment Title Styling */
+.enlist-title-container {
+    background-image: url('/images/enlistbg.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enlist-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Enlistment Section Styling */
+.enlist-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.enlist-icon-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enlist-icon {
+    width: 500px;
+    height: auto;
+}
+
+.enlist-container {
+    width: 50%;
+    padding: 30px;
+    background: violet; 
+    color: white;
+    border-radius: 10px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.enlist-container form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 20px;
+    font-family: 'Inter', sans-serif;
 }
-section.enlist form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 800px;
-    width: 100%;
-    background: #f5f5f5;
-    padding: 30px;
-    border-radius: 10px;
-}
-section.enlist form label {
+
+.enlist-container label {
     font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    width: 80%;
     text-align: left;
+    font-family: 'Inter', sans-serif;
 }
-section.enlist form input, 
-section.enlist form select {
-    width: 100%;
+
+.enlist-container input,
+.enlist-container select {
+    width: 75%;
     padding: 10px;
+    margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 5px; 
+    font-size: 16px;
+    background: white;
+    color: black;
+    font-family: 'Inter', sans-serif;
 }
-section.enlist button {
-    grid-column: span 2;
-    padding: 10px;
-    background-color: violet;
-    color: white;
-    border: none;
-    border-radius: 5px;
+
+.enlist-container select {
+    width: 78%; 
+    appearance: none;
     cursor: pointer;
+    height: 45px;
+    font-family: 'Inter', sans-serif;
 }
-section.enlist button:hover {
-    background-color: #555;
+
+/* Submit Button */
+.enlist-container button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    background: white;
+    color: violet;
+    font-size: 16px;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.enlist-container button:hover {
+    background: rgb(237, 115, 237);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .enlist-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enlist-container, .enlist-icon-wrapper {
+        width: 90%;
+    }
 }
