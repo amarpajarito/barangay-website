@@ -12,6 +12,7 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="home-style.css">
     <script src="/user-website/script.js"></script>
+    <script src="/user-website/slide.js"></script>
 </head>
 <body>
 
@@ -68,6 +69,114 @@ session_start();
     <div class="home-banner-container">
         <img src="/images/Council.png" alt="Barangay San Vicente Banner">
     </div>
+    <div class="home-second-container">
+    <div class="image-wrapper">
+        <div class="text-overlay">
+            <h2>Barangay San Vicente,</h2>
+            <h3>SAN PEDRO LAGUNA.</h3>
+            <br/>
+            <p>
+        Recognized as one of the lowest local government units in 
+        <strong>San Pedro, Laguna</strong>, Barangay San Vicente operates 
+        under the leadership of <strong>Hon. Dr. Apolinario A. Alzona</strong>. 
+        Alongside his dedicated Barangay Councilors, he strives to maintain peace 
+        and order, safeguarding local residents from harm and providing the best 
+        possible services for everyone.
+      </p>
+
+      <p>
+        Settled in the quiet <strong>City of San Pedro Laguna</strong>, Barangay San Vicente 
+        sits in the <strong>1st district</strong>, where it focuses on promoting effective 
+        governance and enhancing administrative efficiency.
+      </p>
+
+      <p>
+        With its bustling streets and thriving community, Barangay San Vicente 
+        stands out among the <strong>28 urbanized barangays</strong> in San Pedro Laguna. 
+        Modern infrastructure, commercial enterprises, and residential areas all converge here, 
+        playing a vital role in advancing the city’s broader urban development goals.
+      </p>
+
+      <p>
+        At the forefront of Barangay San Vicente’s local administration is its newly elected head, 
+        <strong>Dr. Apolinario A. Alzona</strong>. His commitment to community service and dedication 
+        to resident welfare continue to drive the barangay toward greater progress and prosperity.
+      </p>
+
+      <p>
+        The City of San Pedro Laguna itself is organized into <strong>28 barangays</strong> across 
+        six congressional districts. By being part of the <strong>1st district</strong>, Barangay 
+        San Vicente adds to the city’s vibrant cultural tapestry and dynamic landscape.
+      </p>
+
+      <p>
+        In the broader context of San Pedro Laguna, Barangay San Vicente serves as a pivotal 
+        urbanized community that contributes significantly to the city’s growth. With a blend of 
+        residential, commercial, and communal spaces, this barangay embodies the dynamic spirit 
+        that characterizes San Pedro Laguna as a whole.
+      </p>
+        </div>
+    </div>
+</div>
+    <div class="group">
+        <p class="text">BARANGAY SAN VICENTE, SAN PEDRO LAGUNA - OFFICIAL WEBSITE</p>
+    </div>
+<div class="home-third-container">
+    <div class="gallery-wrapper">
+        <div class="gallery-slide">
+            <img src="/images/sv-projects.png" alt="Gallery Image 1">
+            <img src="/images/sv-projects.png" alt="Gallery Image 2">
+            <img src="/images/sv-projects.png" alt="Gallery Image 3">
+            <img src="/images/sv-projects.png" alt="Gallery Image 4">
+        </div>
+    </div>
+    
+    <div class="text-overlay-2">
+        <h2>Barangay San Vicente Projects:</h2>
+        <h3>Headed By: Hon. Dr. Apolinario A. Alzona</h3>
+        <p>
+            Barangay San Vicente continues to flourish as a community-driven, urbanized 
+            barangay in <strong>San Pedro, Laguna</strong>. With ongoing development projects, 
+            it ensures the residents benefit from sustainable infrastructure and accessible 
+            public services.
+        </p>
+        </br>
+        <p>
+            The barangay upholds a mission to create a safe and inclusive environment, 
+            spearheaded by <strong>Hon. Dr. Apolinario A. Alzona</strong> and the dedicated Barangay Council. 
+            Through strategic urban planning and governance, San Vicente remains a model of local progress.
+        </p>
+    </div>
+</div>
+<div class="home-fourth-container">
+    <h1>Our Services</h1>
+    <div class="row">
+    <a href="enlistment-page.html" class="service">
+        <i class="fa-solid fa-fingerprint"></i>
+        <h2>Register</h2>
+        <p>Enlist now in our Barangay</p>
+    </a>
+    <a href="equip-req.html" class="service">
+        <i class="fa-solid fa-toolbox"></i>
+        <h2>Equipment Request</h2>
+        <p>Request Available Equipments</p>
+    </a>
+    <a href="docu-req.html" class="service">
+        <i class="fa-solid fa-file-invoice"></i>
+        <h2>Document Request</h2>
+        <p>Request Important Documents</p>
+    </a>
+    <a href="contacts.html" class="service">
+        <i class="fa-solid fa-id-card-clip"></i>
+        <h2>Contact Us</h2>
+        <p>Send a message to us</p>
+    </a>
+</div>
+
+</div>        
+
+
+
 </main>
 
 <footer class="footer-panel">
@@ -112,6 +221,5 @@ session_start();
         <p>Call Us Today: (088) 888 8888</p>
     </div>
 </footer>
-
 </body>
 </html>
