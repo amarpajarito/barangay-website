@@ -618,6 +618,13 @@ form button {
     margin-bottom: 5px;
 }
 
+.form-group textarea{
+    font-weight: bold;
+    color: #333;
+    text-align: left; 
+    margin-bottom: 5px;
+}
+
 .form-group input,
 .form-group select {
     width: 100%;
@@ -658,9 +665,9 @@ form button {
     background-color: #2980b9;
 }
 
-.edit-user-btn {
+.close-modal-btn {
     padding: 10px 15px;
-    background-color: #4CAF50;
+    background-color: #274597;
     color: white;
     border-radius: 5px;
     font-weight: bold;
@@ -669,8 +676,8 @@ form button {
     cursor: pointer;
 }
 
-.edit-user-btn:hover {
-    background-color: #3e8e41;
+.close-modal-btn:hover {
+    background-color: #133c96;
 }
 
 .modal-header {
@@ -713,4 +720,62 @@ form button {
 .status-pending {
     color: gray;
     font-weight: bold;
+}
+
+
+
+/* Button Styling */
+.approve-btn, .reject-btn{
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.approve-btn {
+    background-color: #28a745;
+    color: white;
+    border: 1px solid #218838;
+}
+
+.approve-btn:hover {
+    background-color: #215f3d;
+}
+
+.view-btn{
+    background-color: #1d70bd;
+    color: white;
+    border: 1px solid 133c96;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.view-btn:hover {
+    background-color: #0e2952;
+}
+
+.reject-btn {
+    background-color: #dc3545;
+    color: white;
+    border: 1px solid #c82333;
+}
+
+.reject-btn:hover {
+    background-color: #5e1018;
+}
+
+.approve-btn i, .reject-btn i, .view-btn i {
+    font-size: 16px;
 }

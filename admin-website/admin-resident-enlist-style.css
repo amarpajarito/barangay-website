@@ -435,7 +435,7 @@ tr:hover {
     color: #555;
 }
 
-.manage-user-add-user-btn {
+.manage-user-add-resident-btn {
     padding: 10px 20px;
     background-color: #3498DB;
     color: white;
@@ -449,7 +449,7 @@ tr:hover {
     border: none;
 }
 
-.manage-user-add-user-btn:hover {
+.manage-user-add-resident-btn:hover {
     background-color: #2980b9;
 }
 
@@ -643,7 +643,7 @@ form button {
     margin-top: 20px;
 }
 
-.add-user-btn {
+.add-resident-btn {
     padding: 10px 15px;
     background-color: #3498DB;
     color: white;
@@ -654,11 +654,11 @@ form button {
     cursor: pointer;
 }
 
-.add-user-btn:hover {
+.add-resident-btn:hover {
     background-color: #2980b9;
 }
 
-.edit-user-btn {
+.edit-resident-btn {
     padding: 10px 15px;
     background-color: #4CAF50;
     color: white;
@@ -669,7 +669,7 @@ form button {
     cursor: pointer;
 }
 
-.edit-user-btn:hover {
+.edit-resident-btn:hover {
     background-color: #3e8e41;
 }
 
@@ -713,4 +713,56 @@ form button {
 .status-pending {
     color: gray;
     font-weight: bold;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* Button Styling */
+.approve-btn, .reject-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.approve-btn {
+    background-color: #28a745;
+    color: white;
+    border: 1px solid #218838;
+}
+
+.approve-btn:hover {
+    background-color: #218838;
+}
+
+.reject-btn {
+    background-color: #dc3545;
+    color: white;
+    border: 1px solid #c82333;
+}
+
+.reject-btn:hover {
+    background-color: #c82333;
+}
+
+.approve-btn i, .reject-btn i {
+    font-size: 16px;
 }
