@@ -17,14 +17,14 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard | Manage Users | Barangay San Vicente San Pedro City Laguna</title>
+    <title>Admin Dashboard | Document Request | Barangay San Vicente San Pedro City Laguna</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="admin-document-request-style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js" defer></script>
-    <script src="/backend/script.js" defer></script>
-    <script src="/backend/view-document.js" defer></script>
+    <script src="../backend/script.js" defer></script>
+    <script src="../backend/view-document.js" defer></script>
 
 </head>
 <body>
@@ -97,7 +97,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
             <div class="header-controls">
                 <div class="search-container">
                     <i class="fas fa-search"></i>
-                    <input type="text" id="searchBox" placeholder="Search users">
+                    <input type="text" id="searchBox" placeholder="Search Document Requests">
                 </div>
             </div>
         </div>
@@ -188,9 +188,6 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
                 <label for="view_status">Status:</label>
                 <input type="text" id="view_status" readonly>
             </div>
-        </div>
-        <div class="modal-footer">
-            <button class="close-modal-btn" onclick="closeModal()">Close</button>
         </div>
     </div>
 </div>

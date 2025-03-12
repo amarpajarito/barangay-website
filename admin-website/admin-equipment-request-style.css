@@ -548,6 +548,7 @@ form button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: 80vh;
 }
 
 .modal-header {
@@ -587,9 +588,10 @@ form button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     padding: 20px;
+    overflow-y: auto;
 }
 
 .form-container {
@@ -626,7 +628,8 @@ form button {
 }
 
 .form-group input,
-.form-group select {
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 10px;
     border: 2px solid #AA60C8;
@@ -634,6 +637,15 @@ form button {
     font-size: 15px;
     outline: none;
     box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
 }
 
 .form-group input:focus,

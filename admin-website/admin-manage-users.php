@@ -94,7 +94,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
             <div class="header-controls">
                 <div class="search-container">
                     <i class="fas fa-search"></i>
-                    <input type="text" id="searchBox" placeholder="Search users">
+                    <input type="text" id="searchBox" placeholder="Search Users">
                 </div>
                 <button id="addUserBtn" class="manage-user-add-user-btn">Add New User</button>
             </div>
@@ -106,6 +106,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
                     <th>ID <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
                     <th>Name <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
                     <th>Email <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
+                    <th>Username <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
                     <th>Role <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
                     <th>Added <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
                     <th>Actions</th>
@@ -113,7 +114,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
             </thead>
             <tbody>
             <?php
-                $query = "SELECT id, CONCAT(first_name, ' ', last_name) AS name, email, 
+                $query = "SELECT id, CONCAT(first_name, ' ', last_name) AS name, email, username, 
                 CASE WHEN is_admin = 1 THEN 'Admin' ELSE 'User' END AS user_role,
                 created_at FROM users ORDER BY id ASC";
 
@@ -131,18 +132,21 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
                     echo "<td>" . htmlspecialchars($row['id']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['name']) . "</td>";
                     echo "<td>" . htmlspecialchars($row['email']) . "</td>";
+                    echo "<td>" . htmlspecialchars($row['username']) . "</td>";
                     echo "<td>" . $roleBadge . "</td>";
                     echo "<td>" . date("Y-m-d", strtotime($row['created_at'])) . "</td>"; 
                     echo "<td>
-                        <button class='edit-btn'  onclick='openEditModal(" . $row['id'] . ", \"" . addslashes($row['name']) . "\", \"" . addslashes($row['email']) . "\", \"" . ($row['user_role'] == 'Admin' ? 'admin' : 'user') . "\")'>
+                        <button class='edit-btn' onclick='openEditModal(" 
+                        . $row['id'] . ", \"" 
+                        . addslashes($row['name']) . "\", \"" 
+                        . addslashes($row['email']) . "\", \"" 
+                        . addslashes($row['username']) . "\", \""
+                        . ($row['user_role'] == 'Admin' ? 'admin' : 'user') . "\")'>
                             <i class='fas fa-edit'></i> Edit
                         </button>
-                        <form action='/admin-backend/delete-user.php' method='post'>
-                            <input type='hidden' name='id' value='" . htmlspecialchars($row['id']) . "'>
-                            <button type='submit' class='delete-btn' onclick='return confirm(\"Are you sure?\");'>
-                                <i class='fas fa-trash'></i> Delete
-                            </button>
-                        </form>
+                        <button class='delete-btn' onclick='openDeleteModal(" . $row['id'] . ")'>
+                            <i class='fas fa-trash'></i> Delete
+                        </button>
                     </td>";
                     echo "</tr>";
                 }
@@ -158,7 +162,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
                 <button class="close">&times;</button>
             </div>
             <div class="modal-body">
-                <form action="/admin-backend/edit-user.php" method="post">
+                <form action="/admin-backend/add-user.php" method="post">
                     <div class="form-group">
                         <label for="first_name">First Name:</label>
                         <input type="text" id="first_name" name="first_name" required>
@@ -170,6 +174,10 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
                     <div class="form-group">
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
                     </div>
                     <div class="form-group">
                         <label for="password">Password:</label>
@@ -212,6 +220,10 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
                     <input type="email" id="edit_email" name="email" value="<?= $email ?>" required>
                 </div>
                 <div class="form-group">
+                        <label for="edit_username">Username:</label>
+                        <input type="text" id="edit_username" name="username" value="<?= $username ?>" required>
+                    </div>
+                <div class="form-group">
                     <label for="edit_role">Role:</label>
                     <select id="edit_role" name="is_admin">
                         <option value="0" <?= $is_admin == 0 ? 'selected' : '' ?>>User</option>
@@ -222,6 +234,23 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
                     <button type="submit" class="edit-user-btn">Edit User</button>
                 </div>
             </form>
+        </div>
+    </div>
+    <div id="deleteUserModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Confirm Deletion</h2>
+                <span class="close" onclick="closeDeleteModal()">&times;</span>
+            </div>
+            <form action="/admin-backend/delete-user.php" method="post">
+            <div class="modal-body">
+                <p>Are you sure you want to delete this user?</p>
+                <input type="hidden" id="delete_user_id">
+            </div>
+            <div class="modal-footer">
+                <button id="confirmDeleteBtn" class="delete-btn">Delete</button>
+                <button class="cancel-btn" onclick="closeDeleteModal()">Cancel</button>
+            </div>
         </div>
     </div>
 </div>

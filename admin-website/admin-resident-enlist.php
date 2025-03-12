@@ -23,7 +23,8 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
     <link rel="stylesheet" href="admin-resident-enlist-style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js" defer></script>
-    <script src="/backend/resident-add.js" defer></script>
+    <script src="../backend/script.js" defer></script>
+    <script src="../backend/resident-add.js" defer></script>
 </head>
 <body>
 <header>
@@ -94,7 +95,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
             <div class="header-controls">
                 <div class="search-container">
                     <i class="fas fa-search"></i>
-                    <input type="text" id="searchBox" placeholder="Search users">
+                    <input type="text" id="searchBox" placeholder="Search Resident Enlists">
                 </div>
                 <button id="addUserBtn" class="manage-user-add-resident-btn">Add New Resident</button>
             </div>

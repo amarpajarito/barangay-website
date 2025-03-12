@@ -96,7 +96,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
             <div class="header-controls">
                 <div class="search-container">
                     <i class="fas fa-search"></i>
-                    <input type="text" id="searchBox" placeholder="Search users">
+                    <input type="text" id="searchBox" placeholder="Search Equipment Requests">
                 </div>
             </div>
         </div>
@@ -187,9 +187,6 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
                 <label for="view_status">Status:</label>
                 <input type="text" id="view_status" readonly>
             </div>
-        </div>
-        <div class="modal-footer">
-            <button class="close-modal-btn" onclick="closeModal()">Close</button>
         </div>
     </div>
 </div>
