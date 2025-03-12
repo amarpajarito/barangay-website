@@ -4,12 +4,18 @@ require ('../backend/db-connect.php');
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (!isset($_POST['user_id']) || !is_numeric($_POST['user_id'])) {
-        $_SESSION['error_message'] = "Invalid request.";
+        $_SESSION['error_message'] = "Invalid request. User ID missing or invalid.";
         header("Location: ../admin-website/admin-manage-users.php");
         exit;
     }
 
     $user_id = intval($_POST['user_id']);
+
+    if (!isset($_SESSION['user_id'])) {
+        $_SESSION['error_message'] = "Session user ID not found.";
+        header("Location: ../admin-website/admin-manage-users.php");
+        exit;
+    }
 
     if ($_SESSION['user_id'] == $user_id) {
         $_SESSION['error_message'] = "You cannot delete your own account.";
@@ -39,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
+    // Attempt to delete the user
     $deleteQuery = "DELETE FROM users WHERE id = ?";
     $stmt = $conn->prepare($deleteQuery);
     $stmt->bind_param("i", $user_id);
@@ -46,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($stmt->execute()) {
         $_SESSION['message'] = "User deleted successfully.";
     } else {
-        $_SESSION['error_message'] = "Error deleting user: " . $conn->error;
+        $_SESSION['error_message'] = "Error deleting user: " . $stmt->error;
     }
 
     $stmt->close();
@@ -59,4 +66,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     header("Location: ../admin-website/admin-manage-users.php");
     exit;
 }
+
 ?>

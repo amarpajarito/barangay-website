@@ -308,7 +308,7 @@ margin-top: auto;
     }
 }
 
-/* Manage Users section */
+/* Manage documents section */
 .manage-users {
     width: 95%;
     margin: 20px auto;
@@ -321,7 +321,7 @@ margin-top: auto;
 /* Manage Users table section */
 table {
     width: 100%;
-    border-collapse: collapse;
+    table-layout: fixed;
     margin-top: 10px;
     background: white;
     border-radius: 8px;
@@ -537,6 +537,10 @@ form button {
     padding: 0 15px;
 }
 
+.modal-open {
+    overflow: hidden;
+}
+
 .modal-content {
     background-color: #fff;
     padding: 20px;
@@ -548,6 +552,7 @@ form button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: 80vh;
 }
 
 .modal-header {
@@ -587,9 +592,11 @@ form button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     padding: 20px;
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 .form-container {
@@ -619,14 +626,24 @@ form button {
 }
 
 .form-group input,
-.form-group select {
+.form-group select,
+.form-group textarea {
     width: 100%;
     padding: 10px;
     border: 2px solid #AA60C8;
     border-radius: 6px;
     font-size: 15px;
     outline: none;
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    box-sizing: border-box; 
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
 }
 
 .form-group input:focus,
@@ -635,71 +652,7 @@ form button {
     box-shadow: 0 0 5px rgba(0, 91, 187, 0.5);
 }
 
-/* Center the Add User Button */
-.form-actions {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.add-user-btn {
-    padding: 10px 15px;
-    background-color: #3498DB;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
-}
-
-.add-user-btn:hover {
-    background-color: #2980b9;
-}
-
-.edit-user-btn {
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
-}
-
-.edit-user-btn:hover {
-    background-color: #3e8e41;
-}
-
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #f8f9fa;
-    padding: 10px 15px;
-    border-radius: 8px 8px 0 0;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-}
-
-.modal-header h2 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    text-align: left;
-    margin: 0;
-}
-
-.modal-header .close {
-    font-size: 22px;
-    color: #6c757d;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-
+ /* Status Indicator */
 .status-approved {
     color: green;
     font-weight: bold;
@@ -714,8 +667,6 @@ form button {
     color: gray;
     font-weight: bold;
 }
-
-
 
 /* Button Styling */
 .approve-btn, .reject-btn{
