@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssssss", $first_name, $last_name, $address, $contact_number, $civil_status, $purpose);
 
     if ($stmt->execute()) {
-        echo "<script>alert('Enlistment Successful!'); window.location.href='../enlistment-page.html';</script>";
+        echo "<script>alert('Enlistment Successful!'); window.location.href='../enlistment-page.php';</script>";
     } else {
         echo "<script>alert('Error: " . $stmt->error . "'); window.history.back();</script>";
     }
