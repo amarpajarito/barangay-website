@@ -34,12 +34,12 @@ session_start();
             <li class="request-item">
                 <a href="request.php">Request <i class="fas fa-angle-down"></i></a>
                 <div class="submenu">
-                    <a href="document-request.php">Document Request <i class="fas fa-angle-right"></i></a>
-                    <a href="equipment-request.php">Equipment Request <i class="fas fa-angle-right"></i></a>
+                    <a href="docu-req.php">Document Request <i class="fas fa-angle-right"></i></a>
+                    <a href="equip-req.php">Equipment Request <i class="fas fa-angle-right"></i></a>
                 </div>
             </li>
-            <li><a href="enlist.html">Register</a></li>
-            <li><a href="contacts.html">Contact</a></li>
+            <li><a href="enlistment-page.php">Register</a></li>
+            <li><a href="contacts.php">Contact</a></li>
         </ul>
 
         <?php
@@ -151,22 +151,22 @@ session_start();
 <div class="home-fourth-container">
     <h1>Our Services</h1>
     <div class="row">
-    <a href="enlistment-page.html" class="service">
+    <a href="enlistment-page.php " class="service">
         <i class="fa-solid fa-fingerprint"></i>
         <h2>Register</h2>
         <p>Enlist now in our Barangay</p>
     </a>
-    <a href="equip-req.html" class="service">
+    <a href="equip-req.php" class="service">
         <i class="fa-solid fa-toolbox"></i>
         <h2>Equipment Request</h2>
         <p>Request Available Equipments</p>
     </a>
-    <a href="docu-req.html" class="service">
+    <a href="docu-req.php" class="service">
         <i class="fa-solid fa-file-invoice"></i>
         <h2>Document Request</h2>
         <p>Request Important Documents</p>
     </a>
-    <a href="contacts.html" class="service">
+    <a href="contacts.php" class="service">
         <i class="fa-solid fa-id-card-clip"></i>
         <h2>Contact Us</h2>
         <p>Send a message to us</p>

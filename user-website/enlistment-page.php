@@ -1,42 +1,68 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enlistment Page</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="enlist-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="/user-website/script.js"></script>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="header-content">
-                <div class="logo">
-                    <img src="../images/barangay-logo.png" alt="Barangay San Vicente Logo">
-                </div>
-                <div class="header-title">
-                    <h2>Barangay San Vicente</h2>
-                    <h3>San Pedro City Laguna</h3>
-                </div>
+                <a href="home.php">
+                    <div class="logo">
+                        <img src="/images/barangay-logo.png" alt="Barangay San Vicente Logo">
+                    </div>
+                    <div class="header-title">
+                        <h2>Barangay San Vicente</h2>
+                        <h3>San Pedro City Laguna</h3>
+                    </div>
+                </a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="/user-website/home.php">Home</a></li>
                 <li class="request-item">
                     <a href="request.php">Request <i class="fas fa-angle-down"></i></a>
                     <div class="submenu">
-                        <a href="document-request.php">Document Request<i class="fas fa-angle-right"></i></a>
-                        <a href="equipment-request.php">Equipment Request<i class="fas fa-angle-right"></i></a>
+                        <a href="docu-req.php">Document Request <i class="fas fa-angle-right"></i></a>
+                        <a href="equip-req.php">Equipment Request <i class="fas fa-angle-right"></i></a>
                     </div>
                 </li>
-                <li><a href="register.php">Register</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="enlistment-page.php">Register</a></li>
+                <li><a href="contacts.php">Contact</a></li>
             </ul>
-            <div class="nav-buttons">
-                <a href="login.php" class="btn sign-in">Sign in</a>
-                <a href="register.php" class="btn register">Register</a>
-            </div>
+    
+            <?php
+            if (isset($_SESSION['first_name']) && isset($_SESSION['last_name'])) {
+                $full_name = htmlspecialchars($_SESSION['first_name'] . " " . $_SESSION['last_name']);
+            } else {
+                $full_name = htmlspecialchars($_SESSION['user_name']);
+            }
+    
+            $profile_pic = isset($_SESSION['profile_pic']) ? $_SESSION['profile_pic'] : "/images/barangay-logo.png";
+    
+            echo '<div class="profile-dropdown">
+                <button class="profile-btn">
+                    <img src="' . htmlspecialchars($profile_pic) . '" alt="Profile" class="profile-pic">
+                    <span>' . $full_name . '</span>
+                    <i class="fas fa-angle-down"></i>
+                </button>
+                <div class="submenu">
+                    <a href="profile.php">Edit Profile</a>
+                    <a href="/backend/logout.php">Logout</a>
+                </div>
+            </div>';
+            ?>
         </nav>
-    </header> 
+    </header>
 	
 <main>
 	<!-- Enlistment Form Title -->
