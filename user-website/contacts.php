@@ -2,6 +2,7 @@
 session_start();
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +11,11 @@ session_start();
     <title>Barangay San Vicente San Pedro City Laguna | Home Page</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="contacts-style.css">
+    <link rel="stylesheet" href="contact-style.css">
     <script src="/user-website/script.js"></script>
 </head>
 <body>
-    <header>
+<header>
         <nav class="navbar">
             <div class="header-content">
                 <a href="home.php">
@@ -62,25 +63,64 @@ session_start();
             </div>';
             ?>
         </nav>
-    </header> 
+    </header>
+
+
+    <!-- Contacts section of the website -->
+
+
+<main>
+    <div class="contact-titlebg-container">
+	<h2 class="contact-titlebg">Contact Us</h2>
+</div>
 <section class="contact-section">
-    <h1>Get in Touch</h1>
-    <p>Get in touch with us for any inquiries or concerns.</p>
-    <div class="contact-container">
-        <h2>Contact us</h2>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <div class="contact-wrapper">
+        <div class="contact-container">
+            <div class="contact-left">
+
+                <div class="contact-icon-wrapper">
+                    <img src="/images/contact-us.png" alt="Contact Icon" class="contact-icon">
+                </div>
+                <form action="https://formsubmit.co/@.com" method="post" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" name="first-name" placeholder="First Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="last-name" placeholder="Last Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="address" placeholder="Address" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+
+            </div>
+        </div>
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.2065650158656!2d121.0458109751015!3d14.357454386100573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d0cc35a8d41b%3A0x58cc05b88b0aeb6a!2sSan%20Vicente%20Barangay%20Hall!5e0!3m2!1sen!2sph!4v1740658937553!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
 </section>
+
+</main>
+
+
+
+<!-- End -->
+
+
+
 <footer class="footer-panel">
         <div class="footer-top">
             <div class="footer-content">
                 <div class="footer-logo">
-                <img src="/images/republika.png" alt="Logo">
+                    <img src="../images/republika.png" alt="Logo">
                 </div>
                 <div class="footer-links">
                     <div>
@@ -111,7 +151,6 @@ session_start();
                 </div>
             </div>
         </div>
-
         <div class="footer-bottom">
             <p>Copyright © 2024 <strong>The Official Website of Barangay San Vicente</strong>. All Rights Reserved.</p>
             <p>Barangay Multi-Purpose Hall, Barangay San Vicente, San Pedro, Laguna, Philippines 4023</p>

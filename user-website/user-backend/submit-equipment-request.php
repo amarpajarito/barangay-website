@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssss", $name, $item_type, $address, $reason);
 
     if ($stmt->execute()) {
-        echo "<script>alert('Request submitted successfully!'); window.location.href='../equp-req.html';</script>";
+        echo "<script>alert('Request submitted successfully!'); window.location.href='../equip-req.php';</script>";
     } else {
         echo "<script>alert('Error submitting request. Please try again.'); window.history.back();</script>";
     }
