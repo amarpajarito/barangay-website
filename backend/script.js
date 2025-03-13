@@ -160,9 +160,35 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // ------------------ Read More Functionality ------------------
+
+    window.openReadMoreModal = function (reasonText) {
+        document.getElementById("fullReasonText").innerText = reasonText;
+        document.getElementById("readMoreModal").style.display = "block";
+    };
+
+    window.closeReadMoreModal = function () {
+        document.getElementById("readMoreModal").style.display = "none";
+    };
+
+    window.onclick = function (event) {
+        let modal = document.getElementById("readMoreModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    // Attach Read More Button inside the Request View Modal
+    window.openViewRequestModal = function (reason) {
+        document.getElementById("view_reason").value = reason;
+        let readMoreBtn = document.getElementById("readMoreBtn");
+
+        if (reason.length > 40) {
+            readMoreBtn.style.display = "inline-block";
+            readMoreBtn.setAttribute("onclick", `openReadMoreModal("${reason.replace(/"/g, '&quot;')}")`);
+        } else {
+            readMoreBtn.style.display = "none";
+        }
+    };
 
 });
-
-
-
-

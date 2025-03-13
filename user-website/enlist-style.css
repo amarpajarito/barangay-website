@@ -49,8 +49,13 @@ main {
     color: #AA60C8;
 }
 
-.header-title h2, h3 {
+.header-title h2, h3{
     margin: 0; 
+}
+
+.header-title h4 {
+    margin: 0;
+    color:black; 
 }
 
 .nav-links {
@@ -108,7 +113,7 @@ main {
 }
 
 /* Sub Menu */
-.request-item:hover .submenu {
+.request-section:hover .submenu {
     display: block; 
 }
 
@@ -136,7 +141,7 @@ main {
 
 .submenu a:hover {
     background-color: #f0f0f0; 
-    color: violet;
+    color: #AA60C8;
 }
 
 .submenu.active {
@@ -174,24 +179,24 @@ main {
 
 .profile-dropdown .submenu {
     right: 0;
-    top: 50px;
+    top: 37px;
+    position:absolute;
 }
 
 .profile-dropdown:hover .submenu {
     display: block;
 }
 
-
 /* Footer */
 .footer-panel {
-    background-color: violet;
+    background-color: #AA60C8;
     overflow: hidden;
     margin: 0px;
     margin-top: auto;
 }
 
 .footer-top {
-    background: violet;
+    background: #AA60C8;
     color: white;
     padding: 20px;
 }

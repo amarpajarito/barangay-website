@@ -1,10 +1,4 @@
 /* Main */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -55,8 +49,13 @@ main {
     color: #AA60C8;
 }
 
-.header-title h2, h3 {
+.header-title h2, h3{
     margin: 0; 
+}
+
+.header-title h4 {
+    margin: 0;
+    color:black; 
 }
 
 .nav-links {
@@ -114,7 +113,7 @@ main {
 }
 
 /* Sub Menu */
-.request-item:hover .submenu {
+.request-section:hover .submenu {
     display: block; 
 }
 
@@ -142,7 +141,7 @@ main {
 
 .submenu a:hover {
     background-color: #f0f0f0; 
-    color: violet;
+    color: #AA60C8;
 }
 
 .submenu.active {
@@ -180,14 +179,118 @@ main {
 
 .profile-dropdown .submenu {
     right: 0;
-    top: 50px;
+    top: 37px;
+    position:absolute;
 }
 
 .profile-dropdown:hover .submenu {
     display: block;
 }
 
+/* Footer */
+.footer-panel {
+    background-color: #AA60C8;
+    overflow: hidden;
+    margin: 0px;
+    margin-top: auto;
+}
 
+.footer-top {
+    background: #AA60C8;
+    color: white;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    margin-left: 5rem;
+    margin-top: 2rem;
+}
+.footer-logo img {
+    height: 150px;
+    width: 150px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-right: 5rem;
+    margin-top: 1rem;
+}
+
+.footer-links div {
+    max-width: 250px;
+}
+
+.footer-links h3 {
+    margin-top: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer-bottom p {
+    color: black;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.visitor-counter {
+    font-size: 20px;
+    font-weight: bold;
+    color: violet;
+    margin-top: 10px;
+}
+
+.footer-panel {
+margin-top: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
 
 /* Home Banner */
 .home-banner-container {
@@ -206,16 +309,13 @@ main {
 .home-second-container {
     position: relative;
     width: 100%;
-    height: 100vh; 
+    height: 115vh; 
     overflow: hidden;
     display: flex;
     justify-content: center;
 }
 
-.home-second-container {
-    position: relative;
-    display: inline-block; 
-}
+
 
 /* Wrapper for the image */
 .image-wrapper {
@@ -238,11 +338,12 @@ main {
 .text-overlay {
     position: absolute;
     top: 100px; 
-    left: 120px; 
+    left: 125px; 
     transform: none; 
     color: rgb(58, 8, 59);
     padding: 10px;
     border-radius: 5px;
+    z-index: 10;
 }
 
 .text-overlay p{
@@ -305,7 +406,7 @@ main {
     overflow: hidden;
     color:#fecafe;
     background-color: #391149;
-    margin-top: -10px;
+    margin-top: 0px;
 
 }
 
@@ -336,7 +437,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5%;
     overflow: hidden;
     background: url('/images/home-third.png') no-repeat center center;
     background-size: cover;
@@ -350,6 +450,7 @@ main {
     justify-content: center;
     overflow: hidden;
     position: relative;
+    margin-left: 60px;
 }
 
 .gallery-slide {
@@ -432,14 +533,13 @@ main {
 /* Fourth Section */
 .home-fourth-container {
     width: 100%;
-    height: 80vh;
-    padding: 0 8%;
+    height: 90vh;
 }
 
 .home-fourth-container h1{
     text-align: center;
-    padding-top: 50px;
-    margin-bottom: 200px;
+    padding-top: 10px;
+    margin-bottom: 50px;
     font-weight: 600;
     position: relative;
     font-size: 80px;
@@ -459,7 +559,7 @@ main {
 .row{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 30px;
+    grid-gap: 20px;
 }
 
 .service{

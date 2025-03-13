@@ -96,25 +96,7 @@ session_start();
         Modern infrastructure, commercial enterprises, and residential areas all converge here, 
         playing a vital role in advancing the city’s broader urban development goals.
       </p>
-
-      <p>
-        At the forefront of Barangay San Vicente’s local administration is its newly elected head, 
-        <strong>Dr. Apolinario A. Alzona</strong>. His commitment to community service and dedication 
-        to resident welfare continue to drive the barangay toward greater progress and prosperity.
-      </p>
-
-      <p>
-        The City of San Pedro Laguna itself is organized into <strong>28 barangays</strong> across 
-        six congressional districts. By being part of the <strong>1st district</strong>, Barangay 
-        San Vicente adds to the city’s vibrant cultural tapestry and dynamic landscape.
-      </p>
-
-      <p>
-        In the broader context of San Pedro Laguna, Barangay San Vicente serves as a pivotal 
-        urbanized community that contributes significantly to the city’s growth. With a blend of 
-        residential, commercial, and communal spaces, this barangay embodies the dynamic spirit 
-        that characterizes San Pedro Laguna as a whole.
-      </p>
+      
         </div>
     </div>
 </div>

@@ -129,7 +129,15 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
             echo "<td>" . htmlspecialchars($row['name']) . "</td>";
             echo "<td>" . htmlspecialchars($row['address']) . "</td>";
             echo "<td>" . htmlspecialchars($row['document_type']) . "</td>";
-            echo "<td>" . htmlspecialchars($row['reason']) . "</td>";
+            echo "<td>";
+            if (strlen($row['reason']) > 35) {
+                echo htmlspecialchars(substr($row['reason'], 0, 35));
+                echo " <strong style='cursor: pointer; color: blue;' onclick='openReadMoreModal(\"" . htmlspecialchars(addslashes($row['reason'])) . "\")'>...</strong>";
+            } else {
+                echo htmlspecialchars($row['reason']);
+            }
+            echo "</td>";
+
             echo "<td>" . date("Y-m-d", strtotime($row['request_date'])) . "</td>";
 
             echo "<td>
@@ -191,8 +199,18 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
         </div>
     </div>
 </div>
+<div id="readMoreModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fa fa-book-open"></i> Full Reason</h2>
+            <button class="close" onclick="closeReadMoreModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p id="fullReasonText"></p>
+        </div>
+    </div>
+</div>
 </main>
-
 <footer class="footer-panel">
     <div class="footer-bottom">
         <p>Copyright © 2024 <strong>The Official Website of Barangay San Vicente</strong>. All Rights Reserved.</p>

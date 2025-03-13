@@ -692,6 +692,10 @@ form button {
     margin: 0;
 }
 
+.modal-header h2, i {
+    gap: 5px;
+}
+
 .modal-header .close {
     font-size: 22px;
     color: #6c757d;

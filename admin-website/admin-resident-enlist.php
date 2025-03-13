@@ -154,7 +154,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
     <div id="addResidentModal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
-            <h2><i class="fas fa-users"></i> Add New Resident</h2>
+            <h2><i class="fas fa-house"></i> Add New Resident</h2>
             <button class="close">&times;</button>
         </div>
         <div class="modal-body">

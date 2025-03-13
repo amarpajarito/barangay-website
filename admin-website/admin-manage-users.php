@@ -154,50 +154,52 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
             </tbody>
         </table>
     </section>
-    
-    <div id="addUserModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2><i class="fas fa-users"></i> Add New User</h2>
-                <button class="close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form action="/admin-backend/add-user.php" method="post">
-                    <div class="form-group">
-                        <label for="first_name">First Name:</label>
-                        <input type="text" id="first_name" name="first_name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="last_name">Last Name:</label>
-                        <input type="text" id="last_name" name="last_name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="role">Role:</label>
-                        <select id="role" name="role">
-                            <option value="user">User</option>
-                            <option value="admin">Admin</option>
-                        </select>
-                    </div>
-                    <div class="form-actions">
-                        <button type="submit" class="add-user-btn">Add User</button>
-                    </div>
-                </form>
-            </div>
+    <!-- Add User Modal -->
+<div id="addUserModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-users"></i> Add New User</h2>
+            <button class="close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form action="/admin-backend/add-user.php" method="post">
+                <div class="form-group">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role:</label>
+                    <select id="role" name="role">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="add-user-btn">Add User</button>
+                </div>
+            </form>
         </div>
     </div>
-    <div id="editUserModal" class="modal">
+</div>
+
+<!-- Edit User Modal -->
+<div id="editUserModal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
             <h2><i class="fas fa-user-edit"></i> Edit User</h2>
@@ -205,29 +207,29 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
         </div>
         <div class="modal-body">
             <form action="/admin-backend/edit-user.php" method="post">
-                <input type="hidden" id="edit_user_id" name="id" value="<?= $id ?>">
+                <input type="hidden" id="edit_user_id" name="id">
                 
                 <div class="form-group">
                     <label for="edit_first_name">First Name:</label>
-                    <input type="text" id="edit_first_name" name="first_name" value="<?= $first_name ?>" required>
+                    <input type="text" id="edit_first_name" name="first_name" required>
                 </div>
                 <div class="form-group">
                     <label for="edit_last_name">Last Name:</label>
-                    <input type="text" id="edit_last_name" name="last_name" value="<?= $last_name ?>" required>
+                    <input type="text" id="edit_last_name" name="last_name" required>
                 </div>
                 <div class="form-group">
                     <label for="edit_email">Email:</label>
-                    <input type="email" id="edit_email" name="email" value="<?= $email ?>" required>
+                    <input type="email" id="edit_email" name="email" required>
                 </div>
                 <div class="form-group">
-                        <label for="edit_username">Username:</label>
-                        <input type="text" id="edit_username" name="username" value="<?= $username ?>" required>
-                    </div>
+                    <label for="edit_username">Username:</label>
+                    <input type="text" id="edit_username" name="username" required>
+                </div>
                 <div class="form-group">
                     <label for="edit_role">Role:</label>
                     <select id="edit_role" name="is_admin">
-                        <option value="0" <?= $is_admin == 0 ? 'selected' : '' ?>>User</option>
-                        <option value="1" <?= $is_admin == 1 ? 'selected' : '' ?>>Admin</option>
+                        <option value="0">User</option>
+                        <option value="1">Admin</option>
                     </select>
                 </div>
                 <div class="form-actions">
@@ -236,22 +238,24 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
             </form>
         </div>
     </div>
-    <div id="deleteUserModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Confirm Deletion</h2>
-                <span class="close" onclick="closeDeleteModal()">&times;</span>
-            </div>
-            <form action="/admin-backend/delete-user.php" method="post">
+</div>
+
+<!-- Delete User Modal (Moved outside Edit Modal) -->
+<div id="deleteUserModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-user-minus"></i> Confirm Deletion</h2>
+            <span class="close">&times;</span>
+        </div>
+        <form action="/admin-backend/delete-user.php" method="post">
             <div class="modal-body">
                 <p>Are you sure you want to delete this user?</p>
-                <input type="hidden" id="delete_user_id">
+                <input type="hidden" id="delete_user_id" name="user_id">
             </div>
             <div class="modal-footer">
-                <button id="confirmDeleteBtn" class="delete-btn">Delete</button>
-                <button class="cancel-btn" onclick="closeDeleteModal()">Cancel</button>
+                <button id="confirmDeleteBtn" class="delete-user-btn">Delete</button>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 </main>

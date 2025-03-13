@@ -578,6 +578,10 @@ form button {
     align-items: center;
 }
 
+.modal-header h2, i {
+    gap: 5px;
+}
+
 .modal-header .close {
     font-size: 22px;
     color: #6c757d;
@@ -642,6 +646,16 @@ form button {
     box-shadow: 0 0 5px rgba(0, 91, 187, 0.5);
 }
 
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+
 /* Modal Buttons */
 .form-actions {
     display: flex;
@@ -678,4 +692,19 @@ form button {
 
 .edit-user-btn:hover {
     background-color: #3e8e41;
+}
+
+.delete-user-btn {
+    padding: 10px 15px;
+    background-color: #E74C3C;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-user-btn:hover {
+    background-color: #c0392b;
 }
