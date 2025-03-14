@@ -24,4 +24,4 @@ Follow these steps to set up and run the project:
 
 4. **Configure the Project Files:**
 
-   - Go to the folder 'front website' and select 'login.php' to access the website
+   - Go to the folder 'front website' and select `login.php` to access the website
