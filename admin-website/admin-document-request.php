@@ -130,8 +130,8 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
             echo "<td>" . htmlspecialchars($row['address']) . "</td>";
             echo "<td>" . htmlspecialchars($row['document_type']) . "</td>";
             echo "<td>";
-            if (strlen($row['reason']) > 30) {
-                echo htmlspecialchars(substr($row['reason'], 0, 30));
+            if (strlen($row['reason']) > 25) {
+                echo htmlspecialchars(substr($row['reason'], 0, 25));
                 echo " <strong style='cursor: pointer; color: blue;' onclick='openReadMoreModal(\"" . htmlspecialchars(addslashes($row['reason'])) . "\")'>...</strong>";
             } else {
                 echo htmlspecialchars($row['reason']);
