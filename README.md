@@ -16,8 +16,9 @@ Follow these steps to set up and run the project:
    - Click 'Start' next to Apache and MySQL to initiate the services.
 
 3. **Set Up the Database:**
-
+   
    - Open your web browser and navigate to [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/).
+   - Create a database called 'barangay_db' before importing the `barangay_db.sql`.
    - Click on the 'Import' tab.
    - Click 'Choose File' and select the `baranggay_db.sql` file from your project directory.
    - Click 'Go' to import the database.
