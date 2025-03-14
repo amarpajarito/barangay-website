@@ -17,7 +17,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard | Document Request | Barangay San Vicente San Pedro City Laguna</title>
+    <title>Manage Document Request | Admin Dashboard | Barangay San Vicente San Pedro City Laguna</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="admin-document-request-style.css">
@@ -93,7 +93,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
 
     <section class="manage-users">
         <div class="manage-users-header">
-            <h2><i class="fas fa-file-alt"></i> Document Request</h2>
+            <h2><i class="fas fa-file-alt"></i> Manage Document Request</h2>
             <div class="header-controls">
                 <div class="search-container">
                     <i class="fas fa-search"></i>
@@ -130,8 +130,8 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
             echo "<td>" . htmlspecialchars($row['address']) . "</td>";
             echo "<td>" . htmlspecialchars($row['document_type']) . "</td>";
             echo "<td>";
-            if (strlen($row['reason']) > 35) {
-                echo htmlspecialchars(substr($row['reason'], 0, 35));
+            if (strlen($row['reason']) > 30) {
+                echo htmlspecialchars(substr($row['reason'], 0, 30));
                 echo " <strong style='cursor: pointer; color: blue;' onclick='openReadMoreModal(\"" . htmlspecialchars(addslashes($row['reason'])) . "\")'>...</strong>";
             } else {
                 echo htmlspecialchars($row['reason']);
@@ -202,7 +202,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
 <div id="readMoreModal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
-            <h2><i class="fa fa-book-open"></i> Full Reason</h2>
+            <h2><i class="fa fa-book-open"></i> Reason</h2>
             <button class="close" onclick="closeReadMoreModal()">&times;</button>
         </div>
         <div class="modal-body">

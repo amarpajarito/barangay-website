@@ -318,6 +318,7 @@ margin-top: auto;
     color: #ffffff;
     letter-spacing: 1px;
     text-align: center;
+    margin-top: 0;
     
     /* Add Flexbox for Vertical and Horizontal Centering */
     display: flex;

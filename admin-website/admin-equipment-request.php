@@ -17,7 +17,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard | Manage Users | Barangay San Vicente San Pedro City Laguna</title>
+    <title>Manage Equipment Request | Admin Dashboard | Barangay San Vicente San Pedro City Laguna</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="admin-equipment-request-style.css">
@@ -92,7 +92,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
 
     <section class="manage-users">
         <div class="manage-users-header">
-            <h2><i class="fas fa-toolbox"></i> Equipment Request</h2>
+            <h2><i class="fas fa-toolbox"></i> Manage Equipment Request</h2>
             <div class="header-controls">
                 <div class="search-container">
                     <i class="fas fa-search"></i>
@@ -107,7 +107,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
             <th>ID <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
             <th>Name <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
             <th>Address <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
-            <th>Document Type <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
+            <th>Equipment Type <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
             <th>Reason <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
             <th>Added <span class="sort-icon"><i class="fa fa-sort"></i></span></th>
             <th>Actions</th>

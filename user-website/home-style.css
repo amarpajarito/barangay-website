@@ -533,7 +533,7 @@ margin-top: auto;
 /* Fourth Section */
 .home-fourth-container {
     width: 100%;
-    height: 90vh;
+    height: 70vh;
 }
 
 .home-fourth-container h1{
@@ -542,7 +542,7 @@ margin-top: auto;
     margin-bottom: 50px;
     font-weight: 600;
     position: relative;
-    font-size: 80px;
+    font-size: 70px;
 }
 
 .home-fourth-container h1::after {
@@ -566,7 +566,7 @@ margin-top: auto;
     text-align: center;
     padding: 25px 10px;
     border-radius: 5px;
-    font-size: 28px;
+    font-size: 20px;
     cursor: pointer;
     transition: transform 0.5s, background 0.5s;
     background: transparent;
@@ -589,7 +589,7 @@ margin-top: auto;
 .service:hover{
     background: #9649a8;
     color: #fff;
-    transform: scale(1.05);
+    transform: scale(0.95);
 }
 
 .service:hover i{

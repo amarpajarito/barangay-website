@@ -320,7 +320,7 @@ margin-top: auto;
     width: 50%;
     margin: 50px auto 80px auto;
     padding: 30px;
-    background: rgba(138, 43, 226, 0.9); /* Violet with transparency */
+    background: #AA60C8; /* Violet with transparency */
     color: white;
     border-radius: 12px; /* Smooth rounded edges */
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
@@ -329,11 +329,6 @@ margin-top: auto;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.document-request-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
 }
 
 .document-request-container form {
@@ -362,7 +357,7 @@ margin-top: auto;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px; /* Soft edges */
     font-size: 16px;
-    background: rgba(255, 255, 255, 0.2);
+    background: white;
     color: black;
     font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
@@ -374,13 +369,6 @@ margin-top: auto;
     color: rgba(255, 255, 255, 0.7);
 }
 
-.document-request-container input:focus,
-.document-request-container select:focus,
-.document-request-container textarea:focus {
-    border-color: black;
-    outline: none;
-    background: rgba(255, 255, 255, 0.3);
-}
 
 /* Dropdown */
 .document-request-container select {
@@ -402,7 +390,7 @@ margin-top: auto;
     padding: 12px 24px;
     border: none;
     background: white;
-    color: #8a2be2;
+    color: #AA60C8;
     font-size: 16px;
     font-weight: bold;
     border-radius: 8px;
@@ -448,7 +436,7 @@ margin-top: auto;
     width: 50%;
     margin: 50px auto 80px auto;
     padding: 30px;
-    background: rgba(138, 43, 226, 0.9); /* Violet with transparency */
+    background: #AA60C8;
     color: white;
     border-radius: 12px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
@@ -457,11 +445,6 @@ margin-top: auto;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.equipment-request-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
 }
 
 .equipment-request-container form {
@@ -490,7 +473,7 @@ margin-top: auto;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     font-size: 16px;
-    background: rgba(255, 255, 255, 0.2);
+    background: white;
     color: black;
     font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
@@ -530,7 +513,7 @@ margin-top: auto;
     padding: 12px 24px;
     border: none;
     background: white;
-    color: #8a2be2;
+    color: #AA60C8;
     font-size: 16px;
     font-weight: bold;
     border-radius: 8px;

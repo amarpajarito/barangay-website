@@ -17,7 +17,7 @@ $is_admin = isset($user['is_admin']) ? $user['is_admin'] : 0;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard | Manage Users | Barangay San Vicente San Pedro City Laguna</title>
+    <title>Manage User | Admin Dashboard | Barangay San Vicente San Pedro City Laguna</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="admin-manage-users-style.css">

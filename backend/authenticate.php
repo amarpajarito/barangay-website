@@ -5,6 +5,7 @@ require 'db-connect.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $input = trim($_POST['email-username']);
     $password = trim($_POST['password']);
+    $remember = isset($_POST['remember']);
 
     if (empty($input)) {
         $_SESSION['error'] = "Username or email is required.";
@@ -39,10 +40,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $_SESSION['message'] = "Welcome, " . htmlspecialchars($first_name) . "!";
 
-            if ($is_admin) {
-                header("Location: /admin-website/admin-manage-users.php"); 
+            if ($remember) {
+                setcookie("remember_username", $input, time() + (30 * 24 * 60 * 60), "/"); 
             } else {
-                header("Location: /user-website/home.php"); 
+                setcookie("remember_username", "", time() - 3600, "/");
+            }
+
+            if ($is_admin) {
+                header("Location: /admin-website/admin-manage-users.php");
+            } else {
+                header("Location: /user-website/home.php");
             }
             exit();
         } else {
